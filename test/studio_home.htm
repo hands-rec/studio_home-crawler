@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Private Photo Studio HOME</title>
+<meta name="robots" content="noindex,nofollow" />
+<link rel="stylesheet" href="https://www3.revn.jp/studio-home/inc/css/default.css" type="text/css" media="all" />
+<!-- ↓ COLOR -->
+<link rel="stylesheet" href="https://www3.revn.jp/studio-home/inc/css/color01.css" type="text/css" media="all" />
+<!-- ↑ COLOR END -->
+<script src="https://www3.revn.jp/studio-home/inc/js/function.js" language="JavaScript" type="text/javascript"></script>
+    <script src="https://www3.revn.jp/studio-home/inc/js/jquery-1.4.2.min.js" language="JavaScript" type="text/javascript"></script>
+    <script src="https://www3.revn.jp/studio-home/inc/js/Schedule.js" language="JavaScript" type="text/javascript"></script>
+<script src="https://www3.revn.jp/studio-home/inc/js/common/Header.js" language="Javascript" type="text/javascript"></script>
+
+
+
+</head>
+
+<body>
+<div id="Wrap">
+<!-- ↓ HEADER -->
+<div id="Header">
+<h1>
+            <a href="https://www3.revn.jp/studio-home"><img src="https://www3.revn.jp/studio-home/upload/cms/top_img.jpg" /></a>
+    <!--
+            <div id="hello">&nbsp;</div>
+    -->
+</h1>
+</div>
+<!-- ↑ HEADER END --><!-- ↓ GLOBAL NAVI -->
+<div id="GlobalNavi">
+    <ul class="MenuBarHorizontal">
+                          <li class="MenuBar"><a href="javascript:void(0);" onClick="location.href='https://www3.revn.jp/studio-home/user/form';return false;">新規登録</a></li>
+                      <li class="MenuBar"><a href="javascript:void(0);" onClick="location.href='https://www3.revn.jp/studio-home/yoyaku';return false;">予約履歴</a></li>
+
+                      <li class="MenuBar"><a href="javascript:void(0);" onClick="location.href='https://www3.revn.jp/studio-home/user/form?mode=edit';return false;">登録内容表示</a></li>
+      
+                      <li class="MenuBar"><a href="javascript:void(0);" onClick="location.href='https://www3.revn.jp/studio-home/login';return false;" class="right">ログイン</a></li>
+              </ul>
+</div>
+<!-- ↑ GLOBAL NAVI END -->
+<!-- ↓ CONTAINER -->
+<div id="Container">
+<div id="Title"><h2>予約</h2></div>
+<div class="ContentsBlock">
+  <form name="form1" id="form1" method="get" action="https://www3.revn.jp/studio-home">
+    <!-- ↓ CONTENTS LEFT -->
+    <div class="WrapL">
+                <div class="M20">
+            <dt><span style="font-weight: bold; color: #ff0000;"><img src="/studio-home/img/icon02.jpg" alt="" /></span><span style="font-weight: bold;"><span style="font-size: x-small;">ご予約方法</span></span></dt><dt><span><strong><span style="color: #ff0000;"><span style="font-size: xx-small;"><span style="font-size: x-small;">STEP1</span></span></span></strong></span><span style="color: #ff0000;">&nbsp;</span><span><span style="font-size: xx-small;"><span style="font-size: x-small;">新規登録よりID・PASSを発行</span><br /></span></span><span style="font-weight: bold; color: #ff0000;"><span style="font-size: xx-small;"><span style="color: #ff0000;"><span style="color: #ff0000;"><span style="font-size: x-small;">STEP2</span></span></span><span style="color: #ff0000;">&nbsp;</span></span></span><span style="font-size: xx-small;"><span style="font-size: x-small;">撮影を希望する店舗(鎌倉店・横須賀店)をプルダウンで選んでください。</span><br /></span><span style="color: #ff0000;"><strong><span style="color: #ff0000;"><strong><span style="color: #ff0000;"><strong><span style="font-size: x-small;">STEP3</span></strong></span></strong></span><span style="font-size: xx-small;">&nbsp;</span></strong></span><span style="font-size: xx-small;"><span style="font-size: x-small;">カレンダーから予約開始日を選択&nbsp;</span></span></dt><dt><span style="font-size: xx-small;"><span style="font-size: xx-small;"><span style="font-size: x-small;"><span class="Red" style="font-size: xx-small;"><span style="font-size: x-small;">※現在、2016年07月14日～2016年12月14日までの予約が可能です。</span><br /></span><strong><span style="color: #ff0000;"><span style="color: #ff0000;"><strong><strong><span style="color: #ff0000;"><span style="font-size: x-small;">STEP4</span></span></strong></strong></span><span style="font-size: xx-small;">&nbsp;</span></span></strong></span><span style="font-size: xx-small;"><span style="font-size: x-small;">画面下に表示された予約状況で[空き(予約可能)]の部分をクリック&nbsp;<br /><strong><span style="color: #ff0000;"><span style="color: #ff0000;"><strong><strong><span style="color: #ff0000;">STEP5</span></strong></strong></span>&nbsp;</span></strong>ID・パスワードを入力しログイン&nbsp;<br /><strong><span style="color: #ff0000;"><span style="color: #ff0000;"><strong><strong><span style="color: #ff0000;">STEP6</span></strong></strong></span><strong>&nbsp;</strong></span></strong>必須項目を入力し入力情報確認後<strong>[予約登録]ボタン</strong>をクリックで予約完了</span><br /><br /><span style="font-size: xx-small;"><img src="/studio-home/img/icon02.jpg" alt="" /></span><span style="font-size: xx-small;"><strong><span style="font-size: x-small;"><span style="font-size: x-small;"><strong>ご予約キャンセル方法</strong></span></span></strong><br /></span><span style="font-size: x-small;"><strong><span style="color: #ff0000;"><span style="color: #ff0000;"><strong><strong><span style="color: #ff0000;">STEP1</span></strong></strong></span>&nbsp;</span></strong>メニューに表示された[予約履歴]をクリック<br /><strong><span style="color: #ff0000;"><span style="color: #ff0000;"><strong><strong><span style="color: #ff0000;">STEP2</span></strong></strong></span>&nbsp;</span></strong>ID・パスワードを入力しログイン<br /><strong><span style="color: #ff0000;"><span style="color: #ff0000;"><strong><strong><span style="color: #ff0000;">STEP3</span></strong></strong></span>&nbsp;</span></strong><span>予約履歴からキャンセルしたい予約の[変更・キャンセル]をクリック<br /><strong><span style="color: #ff0000;"><span style="color: #ff0000;"><strong><strong><span style="color: #ff0000;">STEP4</span></strong></strong></span>&nbsp;</span></strong><span>予約情報を確認し、[予約キャンセル]ボタンをクリックでキャンセル完了</span>&nbsp;</span>&nbsp;<br />&nbsp;<br /></span></span><span style="font-size: x-small;"><strong>よくあるご質問&nbsp;</strong>&rarr;&nbsp;<a href="http://studio-home.jp/faq/">http://studio-home.jp/faq/</a></span><br /><span style="font-size: xx-small;">&nbsp;</span></span><br /><span style="color: #ff0000;"><span style="color: #ff0000;"><strong>&nbsp;&nbsp;</strong></span></span></span></dt>        </div>
+        
+                <div class="Text M20">
+            <p><span style="font-size: small;"><span style="color: #ff0000;"><span style="font-size: small;"><strong>【必ずお読み下さい】</strong></span><br /></span><span style="font-size: x-small;"><span style="font-size: small;">・ID発行は一家族一つでお願いします。<br />・半年以内で2回目のご予約の場合はスタジオまで電話連絡（0467‐53‐9170）お願いします。</span><br /></span></span></p>        </div>
+            </div>
+    <!-- ↑ CONTENTS LEFT END -->
+
+    <!-- ↓ CONTENTS RIGHT -->
+    <div class="WrapR">
+    <!-- ↓ CALENDAR -->
+    <dt class="caption"><a href=?date=2016-06-13><img src="https://www3.revn.jp/studio-home/img/icon_arrow03.gif" alt="" />前月</a>　　2016年07月　　<a href="?date=2016-08-13">次月<img src="https://www3.revn.jp/studio-home/img/icon_arrow02.gif" alt="" /></a></dt><table cellspacing="0" class="Calendar"><tr><th class="Sunday">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="Saturday">土</th></tr><tr><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty" style="color:#CCCCCC;">1</td>
+<td class="Saturday" style="color:#CCCCCC;">2</td>
+</tr><tr><td class="Sunday" style="color:#CCCCCC;">3</td>
+<td class="Empty" style="color:#CCCCCC;">4</td>
+<td class="Empty" style="color:#CCCCCC;">5</td>
+<td class="Empty" style="color:#CCCCCC;">6</td>
+<td class="Empty" style="color:#CCCCCC;">7</td>
+<td class="Empty" style="color:#CCCCCC;">8</td>
+<td class="Saturday" style="color:#CCCCCC;">9</td>
+</tr><tr><td class="Sunday" style="color:#CCCCCC;">10</td>
+<td class="Empty" style="color:#CCCCCC;">11</td>
+<td class="Empty" style="color:#CCCCCC;">12</td>
+<td class="Selected">13</td><td class="Empty" style="color:#CCCCCC;">14</td>
+<td class="Empty"><a href="?date=2016-07-15">15</a></td>
+<td class="Saturday"><a href="?date=2016-07-16">16</a></td>
+</tr><tr><td class="Sunday"><a href="?date=2016-07-17">17</a></td>
+<td class="Empty"><a href="?date=2016-07-18">18</a></td>
+<td class="Empty"><a href="?date=2016-07-19">19</a></td>
+<td class="Empty"><a href="?date=2016-07-20">20</a></td>
+<td class="Empty" style="color:#CCCCCC;">21</td>
+<td class="Empty"><a href="?date=2016-07-22">22</a></td>
+<td class="Saturday"><a href="?date=2016-07-23">23</a></td>
+</tr><tr><td class="Sunday"><a href="?date=2016-07-24">24</a></td>
+<td class="Empty"><a href="?date=2016-07-25">25</a></td>
+<td class="Empty"><a href="?date=2016-07-26">26</a></td>
+<td class="Empty"><a href="?date=2016-07-27">27</a></td>
+<td class="Empty" style="color:#CCCCCC;">28</td>
+<td class="Empty"><a href="?date=2016-07-29">29</a></td>
+<td class="Saturday"><a href="?date=2016-07-30">30</a></td>
+</tr><tr><td class="Sunday"><a href="?date=2016-07-31">31</a></td>
+<td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td><td class="Empty">&nbsp;</td></tr></table>
+
+    <!-- ↑ CALENDAR END -->
+
+    <!-- ↓ INFORMATION -->
+            <dt id="Info" class="M3">
+          <ul>
+                          <li ><a href="https://www3.revn.jp/studio-home/index/noticeinfo?id=5">★【ご案内】お着物持参のお願いと持込みリスト</a></li>
+                          <li  class="None"><a href="https://www3.revn.jp/studio-home/index/noticeinfo?id=1">★ドメイン解除方法</a></li>
+                      </ul>
+        </dt>
+              <!-- ↑ INFORMATION END -->
+
+    <!-- ↓ QR -->
+        <!-- ↑ QR END -->
+    </div>
+    <!-- ↑ CONTENTS RIGHT END -->
+
+    <div style="clear:both;"></div>
+
+        <!-- ↓ SCHEDULE -->
+    <div id="Subject">
+      <div id="Schedule" class="M30">
+      <table class="M3">
+        <tbody>
+                    <tr>
+                      <th colspan="21">
+                                    <div id="Search">
+                <p class="F_Left">店舗で絞り込み</p>
+                <select id="category_type_select" name="c_type" class="Form200">
+                                <option value="1" selected>鎌倉雪ノ下</option>
+                                <option value="4">横須賀西海岸店</option>
+                                <option value="5">HOMEロケーションプラン</option>
+                              </select>
+              </div>
+              </ul>
+                        <div id="Date">2016年07月13日 ～ 2016年07月19日</div>
+            <p class="F_Right H25M">
+              <a href="?date=2016-07-14" class="MLR10"><img src="https://www3.revn.jp/studio-home/img/button_02.gif" /></a>
+              <a href="?date=2016-07-06" title="前週"><img src="https://www3.revn.jp/studio-home/img/button_01.gif" /></a>
+              <a href="?date=2016-07-20" title="翌週"><img src="https://www3.revn.jp/studio-home/img/button_03.gif" /></a>
+                                    </p>
+            </th>
+          </tr>
+
+                                                <!-- 上部日付 -->
+          <tr class="ListTitle">
+            <td class="P5_L Nowrap"></td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/13
+ (水) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/14
+ (木) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/15
+ (金) 
+            </td>
+                        <td class="Time" style="font-weight: bold; color: #03c;">
+              7/16
+ (土) 
+            </td>
+                        <td class="Time" style="font-weight: bold; color: #c00;">
+              7/17
+ (日) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/18
+ (月) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/19
+ (火) 
+            </td>
+                      </tr>
+          <!-- 上部日付 END-->
+
+          <!-- 予約状況 -->
+                                    <tr>
+                <td class="P5_L_Nowrap Center">08時30分 ～ 10時30分</td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                        予約期間外
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                      <div class="Holiday" style="background-color: #ccc;">
+                      &nbsp;<br />
+                      &lt;&lt;定休日&gt;&gt;
+                    </div>
+                  <!-- 休日 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                              </tr>
+                                                <tr>
+                <td class="P5_L_Nowrap Center">10時00分 ～ 12時00分</td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                        予約期間外
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                      <div class="Holiday" style="background-color: #ccc;">
+                      &nbsp;<br />
+                      &lt;&lt;定休日&gt;&gt;
+                    </div>
+                  <!-- 休日 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                              </tr>
+                                                <tr>
+                <td class="P5_L_Nowrap Center">11時30分 ～ 13時30分</td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                        予約期間外
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                      <div class="Holiday" style="background-color: #ccc;">
+                      &nbsp;<br />
+                      &lt;&lt;定休日&gt;&gt;
+                    </div>
+                  <!-- 休日 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                              </tr>
+                                                <tr>
+                <td class="P5_L_Nowrap Center">13時00分 ～ 15時00分</td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                        予約期間外
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                      <div class="Holiday" style="background-color: #ccc;">
+                      &nbsp;<br />
+                      &lt;&lt;定休日&gt;&gt;
+                    </div>
+                  <!-- 休日 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                              </tr>
+                                                <tr>
+                <td class="P5_L_Nowrap Center">14時30分 ～ 16時30分</td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                        予約期間外
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                      <div class="Holiday" style="background-color: #ccc;">
+                      &nbsp;<br />
+                      &lt;&lt;定休日&gt;&gt;
+                    </div>
+                  <!-- 休日 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#FFF1E3">
+                                        <!-- 通常予約 -->
+                                                                                                        <a href="https://www3.revn.jp/studio-home/yoyaku/form?f_tid=15407&symbol=E">                                                <br />
+                                                  ○
+                                              </a>                    <!-- キャンセル待ち予約 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                              </tr>
+                                                <tr>
+                <td class="P5_L_Nowrap Center">15時30分 ～ 17時30分</td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                        予約期間外
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                      <div class="Holiday" style="background-color: #ccc;">
+                      &nbsp;<br />
+                      &lt;&lt;定休日&gt;&gt;
+                    </div>
+                  <!-- 休日 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                              <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                              <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                                <td class="Link">
+                  <!-- 休日 -->
+                                                                                <div class="Status" style="background-color:#CCCCCC">
+                                        <!-- 通常予約 -->
+                                                                                                                                  <br />
+                                                  ×
+                                            <!-- 予約可能期間外 -->
+                                        </div>
+                                        <!-- 時間割未設定部分 -->
+                                        <!-- 時間割未設定部分 END -->
+                                  </td>
+                              </tr>
+                                <!-- 予約状況 END -->
+
+          <!-- 下部日付 -->
+          <tr class="ListTitle">
+            <td class="P5_L Nowrap"></td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/13
+ (水) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/14
+ (木) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/15
+ (金) 
+            </td>
+                        <td class="Time" style="font-weight: bold; color: #03c;">
+              7/16
+ (土) 
+            </td>
+                        <td class="Time" style="font-weight: bold; color: #c00;">
+              7/17
+ (日) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/18
+ (月) 
+            </td>
+                        <td class="Time" style="font-weight: bold; ">
+              7/19
+ (火) 
+            </td>
+                      </tr>
+          <!-- 下部日付 END-->
+        <!-- 1週間中に時間割がない場合 -->
+        
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <!-- ↑ SCHEDULE -->
+
+  </form>
+</div>
+<!-- ↑ CONTENTS END -->
+</div>
+<!-- ↑ CONTAINER END -->
+
+<!-- ↓ FOOTER -->
+<div id="Footer">
+  <!--↓ LINK -->
+    <!--↑ LINK END -->
+  <div class="publicity">
+    <p id="Left"><img src="https://www3.revn.jp/studio-home/img/footer.jpg" alt="Private Photo Studio HOME" width="900" height="200" /></p>
+  </div>
+<!-- ↑ FOOTER END -->
+</div>
+<!-- ↑ WRAP END -->
+
+</body>
+</html>
