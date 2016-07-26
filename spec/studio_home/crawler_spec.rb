@@ -82,6 +82,11 @@ describe StudioHome::Crawler::Scraper do
       link = @scraper.scrape_link(3, 5)
       expect(link).to eq 'https://www3.revn.jp/studio-home/yoyaku/form?f_tid=15407&symbol=E'
     end
+
+    it 'not exist' do
+      link = @scraper.scrape_link(3, 4)
+      expect(link).to eq nil
+    end
   end
 
   describe '#execute' do

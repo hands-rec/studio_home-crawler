@@ -62,7 +62,8 @@ module StudioHome
           6.times do |j|
             time_id = j + 1
             value = scrape_value(num, time_id)
-            @date_time_list << ReservationDateTime.new(date, time_id, value)
+            link = scrape_link(num, time_id)
+            @date_time_list << ReservationDateTime.new(date, time_id, value, link)
           end
         end
         @date_time_list
@@ -89,8 +90,8 @@ module StudioHome
       end
 
       def scrape_link(num, time_id)
-        link = scrape_value_cell(num, time_id)
-        link.css('a').attr('href').value
+        link = scrape_value_cell(num, time_id).css('a')
+        link.length == 0 ? nil : link.attr('href').value
       end
 
       private
@@ -109,7 +110,7 @@ module StudioHome
     class ReservationDateTime
       attr_accessor :date, :time_id, :value, :link
       
-      def initialize(date, time_id, value)
+      def initialize(date, time_id, value, link=nil)
         @date = date
         @time_id = time_id
         @value = value
