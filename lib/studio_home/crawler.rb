@@ -11,7 +11,7 @@ module StudioHome
     class Client
       MINIMUM_SLEEP = 1
       CRAWLER_UA = 'Mozilla/5.0 (Windows NT 6.3; Win64; x64; Trident/7.0; rv:11.0) like Gecko'
-      attr_reader :site_url
+      attr_reader :site_url, :place
       def initialize(place, sleep=3)
         @place = place
         @sleep = MINIMUM_SLEEP < sleep ? sleep : MINIMUM_SLEEP
